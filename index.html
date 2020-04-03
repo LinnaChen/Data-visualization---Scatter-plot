@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Visualization - Assignment 3</title>
+</head>
+<body>
+
+<div id="chart1"></div>
+<div id="chart2"></div>
+<div id="chart3"></div>
+
+<script src="data.js"></script>
+<script src="make.js"></script>
+
+<script>
+
+    // dynamically make a svg
+    var chart1 = make("svg", { width: 500, height: 500, "class": "my-chart" });
+    var chart2 = make("svg", { width: 500, height: 500, "class": "my-chart" });
+    var chart3 = make("svg", { width: 500, height: 500, "class": "my-chart" });
+    document.getElementById("chart1").appendChild(chart1);
+    document.getElementById("chart2").appendChild(chart2);
+    document.getElementById("chart3").appendChild(chart3);
+    plotAll1(chart1);
+    plotAll2(chart2);
+    plotAll3(chart3);
+</script>
+
+</body>
+</html>
